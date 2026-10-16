@@ -1,0 +1,103 @@
+export const mockNotifications = [
+  {
+    id: 'notif-001',
+    type: 'resource',
+    title: 'New resource uploaded',
+    message: 'Sarah Chen uploaded "Data Structures Complete Notes"',
+    time: '2 hours ago',
+    isRead: false,
+    icon: '📚',
+  },
+  {
+    id: 'notif-002',
+    type: 'quiz',
+    title: 'Quiz completed',
+    message: 'You scored 85% in Machine Learning Basics quiz',
+    time: '5 hours ago',
+    isRead: false,
+    icon: '✏️',
+  },
+  {
+    id: 'notif-003',
+    type: 'group',
+    title: 'Study group activity',
+    message: 'New discussion in Cloud Computing Study Club',
+    time: '1 day ago',
+    isRead: true,
+    icon: '👥',
+  },
+  {
+    id: 'notif-004',
+    type: 'exam',
+    title: 'Exam reminder',
+    message: 'Database Management exam is in 5 days',
+    time: '1 day ago',
+    isRead: true,
+    icon: '📅',
+  },
+  {
+    id: 'notif-005',
+    type: 'group',
+    title: 'New member joined',
+    message: 'Alex Thompson joined DSA Masters',
+    time: '2 days ago',
+    isRead: true,
+    icon: '👤',
+  },
+];
+
+export const mockUser = {
+  id: 'user-001',
+  name: 'Student',
+  email: 'student@example.com',
+  avatar: '👤',
+  course: 'Computer Science',
+  semester: 6,
+  university: 'Example University',
+  joinDate: '2024-08-15',
+  bio: 'Passionate about technology and learning. Love solving complex problems and building innovative solutions.',
+  stats: {
+    resourcesUploaded: 12,
+    quizzesCompleted: 18,
+    studyGroups: 5,
+    averageScore: 78,
+  },
+};
+
+export const mockRecentActivity = [
+  {
+    id: 'activity-001',
+    type: 'upload',
+    description: 'Uploaded "AWS Introduction Notes"',
+    time: '2 hours ago',
+    icon: '📤',
+  },
+  {
+    id: 'activity-002',
+    type: 'quiz',
+    description: 'Completed "DSA Fundamentals Quiz" - 85%',
+    time: '5 hours ago',
+    icon: '✏️',
+  },
+  {
+    id: 'activity-003',
+    type: 'group',
+    description: 'Joined "Machine Learning Circle"',
+    time: '1 day ago',
+    icon: '👥',
+  },
+  {
+    id: 'activity-004',
+    type: 'save',
+    description: 'Saved "Database Revision Guide"',
+    time: '2 days ago',
+    icon: '🔖',
+  },
+  {
+    id: 'activity-005',
+    type: 'comment',
+    description: 'Commented on "Graph Algorithms Discussion"',
+    time: '3 days ago',
+    icon: '💬',
+  },
+];

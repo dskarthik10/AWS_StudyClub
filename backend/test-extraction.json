@@ -1,0 +1,18 @@
+{
+  "requestContext": {
+    "authorizer": {
+      "jwt": {
+        "claims": {
+          "sub": "test-extraction-user",
+          "email": "extract@test.com",
+          "name": "Extract Tester"
+        }
+      }
+    },
+    "http": {
+      "method": "POST",
+      "path": "/quiz/generate"
+    }
+  },
+  "body": "{\"resourceIds\": [\"b8e2143a-7c8a-4f46-854a-759e9a4b03b7\"], \"count\": 3, \"title\": \"Test Extraction\", \"save\": false}"
+}

@@ -1,0 +1,18 @@
+{
+  "requestContext": {
+    "authorizer": {
+      "jwt": {
+        "claims": {
+          "sub": "test-user-backend",
+          "email": "backend@test.com",
+          "name": "Backend Tester"
+        }
+      }
+    },
+    "http": {
+      "method": "POST",
+      "path": "/quiz/test-quiz-001/submit"
+    }
+  },
+  "body": "{\"answers\": [\"4\", \"Paris\", \"Blue\"]}"
+}

@@ -1,0 +1,16 @@
+{
+  "requestContext": {
+    "authorizer": {
+      "jwt": {
+        "claims": {
+          "sub": "test-user-backend",
+          "email": "backend@test.com"
+        }
+      }
+    },
+    "http": {
+      "method": "GET",
+      "path": "/quiz/test-quiz-001/result"
+    }
+  }
+}

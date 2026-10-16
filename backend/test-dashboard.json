@@ -1,0 +1,17 @@
+{
+  "requestContext": {
+    "authorizer": {
+      "jwt": {
+        "claims": {
+          "sub": "test-user-123",
+          "email": "test@example.com",
+          "name": "Test User"
+        }
+      }
+    },
+    "http": {
+      "method": "GET",
+      "path": "/dashboard"
+    }
+  }
+}

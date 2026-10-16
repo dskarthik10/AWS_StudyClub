@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(aws sts get-caller-identity *)",
+      "Bash(aws configure get region *)",
+      "Bash(Get-ChildItem -Directory)",
+      "Bash(Select-Object Name)",
+      "Bash(aws lambda list-functions *)",
+      "Bash(aws apigatewayv2 get-apis *)",
+      "Bash(aws dynamodb describe-table *)",
+      "Bash(aws s3api *)",
+      "Bash(aws apigatewayv2 get-routes *)",
+      "Bash(aws apigatewayv2 get-authorizers *)",
+      "Bash(aws apigatewayv2 get-integrations *)",
+      "Bash(aws cognito-idp describe-user-pool *)",
+      "Bash(aws lambda get-function *)",
+      "Bash(aws iam get-role *)",
+      "Bash(aws iam list-attached-role-policies *)",
+      "Bash(aws dynamodb scan *)",
+      "Bash(aws iam list-role-policies *)",
+      "Bash(aws logs describe-log-groups *)",
+      "Bash(aws logs *)",
+      "Bash(unzip -q AIStudyClub-GetResources.zip -d AIStudyClub-GetResources)",
+      "Bash(aws iam get-role-policy *)",
+      "PowerShell($functions = @\\('AIStudyClub-GetResources', 'AIStudyClub-CreateResource', 'AIStudyClub-GenerateUploadUrl', 'AIStudyClub-GenerateDownloadUrl', 'AIStudyClub-Clubs', 'AIStudyClub-Discussion', 'AIStudyClub-AI'\\); foreach \\($func in $functions\\) { $url = aws lambda get-function --function-name $func --region ap-south-1 --query 'Code.Location' --output text; Invoke-WebRequest -Uri $url -OutFile \"backend\\\\lambda-code\\\\$func.zip\" -UseBasicParsing; Expand-Archive -Path \"backend\\\\lambda-code\\\\$func.zip\" -DestinationPath \"backend\\\\lambda-code\\\\$func\" -Force }; Get-ChildItem backend\\\\lambda-code -Directory | Select-Object Name)",
+      "Bash(aws bedrock *)",
+      "Bash(aws cognito-idp *)",
+      "Bash(aws lambda get-function-configuration *)",
+      "Bash(aws iam put-role-policy *)",
+      "Bash(aws lambda *)",
+      "Bash(aws dynamodb get-item *)",
+      "Bash(awk '{print $9, $5}')",
+      "Bash(aws bedrock-runtime *)",
+      "Bash(aws dynamodb put-item --table-name AIStudyClub --item '{ *)",
+      "Bash(aws dynamodb query *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173)",
+      "Bash(grep -E \"\\\\.\\(jsx|js\\)$\")"
+    ]
+  }
+}

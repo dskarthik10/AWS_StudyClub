@@ -1,0 +1,16 @@
+{
+  "requestContext": {
+    "authorizer": {
+      "jwt": {
+        "claims": {
+          "sub": "81834d0a-a051-7047-8a77-5fd3d2fd4fb8",
+          "email": "test@example.com"
+        }
+      }
+    },
+    "http": {
+      "method": "GET",
+      "path": "/notifications/unread"
+    }
+  }
+}

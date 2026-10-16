@@ -1,0 +1,226 @@
+.friends-page {
+  padding: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.friends-search-section {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
+.friends-search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+}
+
+.friends-search-form input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.friends-search-form button {
+  padding: 8px 20px;
+  background: var(--accent-purple);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.friends-search-form button:hover:not(:disabled) {
+  background: var(--accent-purple-dark);
+}
+
+.friends-search-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.friends-error {
+  margin: 12px 0 0 0;
+  color: var(--error);
+  font-size: 13px;
+}
+
+.friends-search-results {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.friends-section {
+  margin-bottom: 32px;
+}
+
+.friends-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.friends-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.friend-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.friend-avatar {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent-purple);
+  background: var(--accent-bg);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.friend-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.friend-info strong {
+  font-size: 14px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.friend-info span {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.friend-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.friend-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.friend-btn:hover:not(:disabled) {
+  background: var(--bg-tertiary);
+}
+
+.friend-btn.primary {
+  background: var(--accent-purple);
+  color: white;
+  border-color: transparent;
+}
+
+.friend-btn.primary:hover:not(:disabled) {
+  background: var(--accent-purple-dark);
+}
+
+.friend-btn.danger {
+  color: var(--error);
+  border-color: var(--border-default);
+}
+
+.friend-btn.danger:hover:not(:disabled) {
+  background: var(--bg-tertiary);
+}
+
+.friend-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.friend-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.friends-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .friends-page {
+    padding: 16px;
+  }
+
+  .friend-row {
+    flex-wrap: wrap;
+  }
+
+  .friend-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,1 @@
+{"statusCode": 502, "headers": {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, content-type", "Access-Control-Allow-Methods": "GET, POST, OPTIONS"}, "body": "{\"error\": \"Quiz generation failed: An error occurred (ValidationException) when calling the Converse operation: Operation not allowed\"}"}

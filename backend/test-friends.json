@@ -1,0 +1,20 @@
+{
+  "requestContext": {
+    "authorizer": {
+      "jwt": {
+        "claims": {
+          "sub": "test-user-999",
+          "email": "searcher@example.com",
+          "name": "Searcher"
+        }
+      }
+    },
+    "http": {
+      "method": "GET",
+      "path": "/users/search"
+    }
+  },
+  "queryStringParameters": {
+    "q": "test"
+  }
+}

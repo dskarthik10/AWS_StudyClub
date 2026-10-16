@@ -1,0 +1,13 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cognito-idp:ListUsers",
+        "cognito-idp:AdminGetUser"
+      ],
+      "Resource": "arn:aws:cognito-idp:ap-south-1:537246502724:userpool/ap-south-1_mmcevaMYP"
+    }
+  ]
+}

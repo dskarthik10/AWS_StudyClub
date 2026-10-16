@@ -1,0 +1,44 @@
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.empty-message {
+  font-size: 14px;
+  color: var(--text-secondary);
+  max-width: 400px;
+  margin-bottom: 24px;
+}
+
+.empty-action {
+  padding: 10px 24px;
+  background: var(--accent-purple);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.empty-action:hover {
+  background: var(--accent-purple-dark);
+}

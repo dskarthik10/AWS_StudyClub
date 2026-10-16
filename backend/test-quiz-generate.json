@@ -1,0 +1,18 @@
+{
+  "requestContext": {
+    "authorizer": {
+      "jwt": {
+        "claims": {
+          "sub": "test-quiz-user",
+          "email": "quiztest@example.com",
+          "name": "Quiz Tester"
+        }
+      }
+    },
+    "http": {
+      "method": "POST",
+      "path": "/quiz/generate"
+    }
+  },
+  "body": "{\"resourceIds\": [\"test-resource-123\"], \"count\": 3, \"title\": \"Test Quiz\", \"save\": false}"
+}

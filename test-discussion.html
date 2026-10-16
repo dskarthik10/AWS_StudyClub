@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Discussion API</title>
+    <script src="https://cdn.jsdelivr.net/npm/aws-amplify@6.20.0/dist/aws-amplify.min.js"></script>
+</head>
+<body>
+    <h1>Test Discussion Post</h1>
+    <div>
+        <label>Club ID: <input id="clubId" value="7A5D5FFA" /></label><br/>
+        <label>Message: <textarea id="message">Test message from debugging</textarea></label><br/>
+        <button onclick="testPost()">Post Message</button>
+        <button onclick="getMessages()">Get Messages</button>
+    </div>
+    <pre id="output"></pre>
+
+    <script type="module">
+        import { Amplify } from 'https://cdn.jsdelivr.net/npm/aws-amplify@6.20.0/+esm';
+        import { fetchAuthSession, signIn } from 'https://cdn.jsdelivr.net/npm/aws-amplify@6.20.0/auth/+esm';
+
+        // Configure Amplify
+        Amplify.configure({
+            Auth: {
+                Cognito: {
+                    userPoolId: 'ap-south-1_mmcevaMYP',
+                    userPoolClientId: '27mt62qidnhmnekdr75kk49iii',
+                }
+            }
+        });
+
+        const API_URL = 'https://vaja7mf7u4.execute-api.ap-south-1.amazonaws.com';
+
+        window.testPost = async function() {
+            const output = document.getElementById('output');
+            const clubId = document.getElementById('clubId').value;
+            const message = document.getElementById('message').value;
+
+            try {
+                output.textContent = 'Getting auth token...';
+                const { tokens } = await fetchAuthSession();
+                const token = tokens.idToken.toString();
+
+                output.textContent += '\nPosting message...';
+                const response = await fetch(`${API_URL}/clubs/${clubId}/messages`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message })
+                });
+
+                const data = await response.json();
+                output.textContent += `\n\nStatus: ${response.status}\nResponse: ${JSON.stringify(data, null, 2)}`;
+            } catch (error) {
+                output.textContent += `\n\nError: ${error.message}\n${error.stack}`;
+            }
+        };
+
+        window.getMessages = async function() {
+            const output = document.getElementById('output');
+            const clubId = document.getElementById('clubId').value;
+
+            try {
+                output.textContent = 'Getting auth token...';
+                const { tokens } = await fetchAuthSession();
+                const token = tokens.idToken.toString();
+
+                output.textContent += '\nFetching messages...';
+                const response = await fetch(`${API_URL}/clubs/${clubId}/messages`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const data = await response.json();
+                output.textContent += `\n\nStatus: ${response.status}\nResponse: ${JSON.stringify(data, null, 2)}`;
+            } catch (error) {
+                output.textContent += `\n\nError: ${error.message}\n${error.stack}`;
+            }
+        };
+    </script>
+</body>
+</html>

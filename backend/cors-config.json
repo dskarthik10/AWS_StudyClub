@@ -1,0 +1,11 @@
+{
+  "AllowOrigins": [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
+    "https://main.d139vrafmyhfue.amplifyapp.com"
+  ],
+  "AllowMethods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  "AllowHeaders": ["authorization", "content-type"],
+  "MaxAge": 300
+}
